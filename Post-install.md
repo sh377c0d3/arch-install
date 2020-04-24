@@ -6,7 +6,8 @@
   3. If ssd, add `discard` to `fstab`. Example:
 	   `UUID=<UUID>	/         	ext4      	defaults,noatime,discard	0 2`
 
-#**** Add User ****
+
+# **** Add User ****
 
 Uncomment `%wheel ALL =(ALL) ALL` from /etc/sudoers
 
