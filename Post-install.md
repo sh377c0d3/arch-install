@@ -9,7 +9,7 @@
 
 # **** Add User ****
 
-Uncomment `%wheel ALL =(ALL) ALL` from /etc/sudoers
+Uncomment `%wheel ALL =(ALL) ALL` from `/etc/sudoers`
 
 Then Run:
 
@@ -19,6 +19,6 @@ Then Run:
 
 Run:
 
-`systemctl enable NetworkManager.service`
+`systemctl enable NetworkManager`
 
 # Enjoy Arch Linux
