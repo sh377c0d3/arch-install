@@ -21,4 +21,8 @@ Run:
 
 `systemctl enable NetworkManager`
 
+## Other Utility 
+
+sudo pacman -S freetype2 terminus-font ttf-bitstream-vera ttf-dejavu ttf-droid ttf-fira-mono ttf-fira-sans ttf-freefont ttf-inconsolata ttf-liberation ttf-linux-libertine ttf-ubuntu-font-family xorg-xfontsel alsa-firmware alsa-utils ffmpeg flac gst-libav gst-plugins-base gst-plugins-good gstreamer lame libdvdcss libdvdnav libdvdread libmpeg2 libtheora libvorbis x264 x265 bzip2 p7zip unrar tar rsync
+
 # Enjoy Arch Linux
