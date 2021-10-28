@@ -25,8 +25,8 @@
   6. `# mkfs.fat -F32 /dev/sda1`
   7. `# mkfs.ext4 /dev/sda2`
   9. `# mount /dev/sda2 /mnt`
-  11. `# mkdir /boot/EFI`
-  12. `# mount /dev/sda1 /boot/EFI`
+  11. `# mkdir /mnt/boot/EFI`
+  12. `# mount /dev/sda1 /mnt/boot/EFI`
   13. `# pacstrap -i /mnt base base-devel`
   14. `# genfstab -U -p /mnt >> /mnt/etc/fstab`
   15. `# arch-chroot /mnt`
