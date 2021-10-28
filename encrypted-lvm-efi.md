@@ -46,8 +46,8 @@
   11. `# mount /dev/volgroup0/root /mnt`
   13. `# mkdir /mnt/boot`
   13. `# mount /dev/sda2 /mnt/boot`
-  14. `# mkdir /boot/EFI`
-  15. `# mount /dev/sda1 /boot/EFI`
+  14. `# mkdir /mnt/boot/EFI`
+  15. `# mount /dev/sda1 /mnt/boot/EFI`
   16. `# pacstrap -i /mnt base base-devel`
   17. `# genfstab -U -p /mnt >> /mnt/etc/fstab`
   18. `# arch-chroot /mnt`
@@ -62,16 +62,14 @@
   27. Edit `/etc/default/grub`:
         add `cryptdevice=<PARTUUID>:volgroup0` to the `GRUB_CMDLINE_LINUX_DEFAULT` line
             If using standard device naming, the option will look like this: `cryptdevice=/dev/sda3:volgroup0`
-  28. `# mkdir /boot/EFI`
-  29. `# mount /dev/sda1 /boot/EFI`
-  30. `# grub-install --target=x86_64-efi  --bootloader-id=grub_uefi --recheck /dev/sda`
-  31. `# cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
-  32. `# grub-mkconfig -o /boot/grub/grub.cfg`
-  33. Create swap file:
+  28. `# grub-install --target=x86_64-efi  --bootloader-id=grub_uefi --recheck /dev/sda`
+  29. `# cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo`
+  30. `# grub-mkconfig -o /boot/grub/grub.cfg`
+  31. Create swap file:
         * `# fallocate -l 2G /swapfile`
         * `# chmod 600 /swapfile`
         * `# mkswap /swapfile`
         * `# echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab`
-  34. `$ exit`
-  35. `# umount -a`
-  36. `# reboot`
+  32. `$ exit`
+  33. `# umount -a`
+  34. `# reboot`
